@@ -35,7 +35,8 @@ export default function CravingsCaseStudy() {
                 <p className="text-[1.625rem] text-[#E7E7E7] leading-[2.6875rem]">
                   As food delivery continues to gain popularity, the Cravings
                   team has come up with a convenient solution for consumers to
-                  order and enjoy their favourite meals from top restaurants at
+                  
+                  order and enjoy their favourite meals from top restaurants atr
                   affordable rates all at the click of a button
                 </p>
               </div>

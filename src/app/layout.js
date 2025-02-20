@@ -26,7 +26,7 @@ const neueMachina = localFont({
 });
 
 const neueMachinaBold = localFont({
-  src: "../fonts/NeueMachina-UltraBold.otf",
+  src: "../fonts/NeueMachinaUltrabold.otf",
   variable: "--font-neue-machina-bold",
   weight: "700",
 });
