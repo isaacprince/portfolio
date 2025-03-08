@@ -25,7 +25,7 @@ export default function Home() {
         <Nav />
 
         <AnimatePresence mode="wait">
-          <div className="relative pt-0 bg-[#111111] h-full">
+          <div className="relative pt-0 mt-10 bg-[#111111] h-full">
             {/* About Section */}
             <motion.div
               className="absolute top-[13.1875rem] left-[12.3125rem] w-[18.5625rem] z-20"
@@ -65,34 +65,34 @@ export default function Home() {
               <div className="absolute top-8 left-0 flex ml-20 gap-2">
                 <a
                   target="_blank"
-                  href="https://www.linkedin.com"
+                  href=":https://www.linkedin.com/in/prince-isaac/"
                   className="text-white"
                 >
                   <span className="bg-none w-[90px] h-[70px] inline-block rotate-12"></span>
                 </a>
                 <a
                   target="_blank"
-                  href="https://www.dribbble.com"
+                  href="https://dribbble.com/princeisaac"
                   className="text-white"
                 >
                   <span className="bg-none w-[90px] h-[70px] inline-block rotate-12"></span>
                 </a>
                 <a
                   target="_blank"
-                  href="https://www.behance.net"
+                  href="https://www.behance.net/princeisaac"
                   className="text-white"
                 >
                   <span className="bg-none w-[90px] h-[70px] inline-block rotate-12"></span>
                 </a>
                 <a
                   target="_blank"
-                  href="https://www.github.com"
+                  href="https://github.com/isaacprince"
                   className="text-white"
                 >
                   <span className="bg-none w-[90px] h-[70px] inline-block rotate-12"></span>
                 </a>
                 <a
-                  href="mailto:example@example.com"
+                  href="mailto:isaacprince002@gmail.com"
                   className="text-white"
                   target="_blank"
                 >
@@ -109,7 +109,12 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <img src="/cv.png" alt="" className="w-full h-[9.72875rem]" />
+              <Link
+                href="https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/edit?tab=t.0"
+                target="_blank"
+              >
+                <img src="/cv.png" alt="" className="w-full h-[9.72875rem]" />
+              </Link>
             </motion.div>
 
             {/* Likes Note */}
@@ -202,7 +207,10 @@ export default function Home() {
         </AnimatePresence>
       </main>
       {/* selected projects */}
-      <section className="min-h-screen flex flex-col items-center bg-[#111111] pt-[6.875rem] px-[6.25rem] mt-[12.375rem]">
+      <section
+        id="projects"
+        className="min-h-screen flex flex-col items-center bg-[#111111] pt-[6.875rem] px-[6.25rem] mt-[12.375rem]"
+      >
         <div className="flex justify-start w-full">
           <h1 className="text-[#FF6600] text-[2.5rem] font-normal mb-[2.4375rem] ml-[5rem] font-neueMachina">
             Selected Projects
@@ -212,7 +220,7 @@ export default function Home() {
         {/* Project 1 */}
         <div
           ref={project1Ref}
-          className="relative w-fit flex flex-col lg:flex-row items-center justify-center mb-[2rem] gap-[11.875rem]"
+          className="relative w-fit flex flex-row items-center justify-center mb-[2rem] gap-[11.875rem]"
         >
           {/* lines */}
           <motion.div
@@ -277,7 +285,7 @@ export default function Home() {
               />
               <div className="absolute bottom-[12%] left-0 w-full flex justify-center">
                 <Link
-                  href="/case-studies/nds/"
+                  href="/case-studies/cravings/"
                   className="border-2 border-black px-[0.375rem] py-[0.09375rem] font-neueMachinaBold text-[#323334] rounded-md hover:bg-black hover:text-[#fef08a] transition-colors bg-[#fef08a] transform rotate-2 text-sm sm:text-base"
                 >
                   VIEW PROJECT
@@ -290,7 +298,7 @@ export default function Home() {
         {/* Project 2 */}
         <div
           ref={project2Ref}
-          className="relative flex flex-col lg:flex-row items-center justify-center gap-[11.875rem]"
+          className="relative flex flex-row items-center justify-center gap-[11.875rem]"
         >
           {/* lines */}
           <motion.div
@@ -347,7 +355,7 @@ export default function Home() {
           >
             <div className="relative">
               <Image
-                src="/description2.png"
+                src="/details2.png"
                 alt="Project Details"
                 width={400}
                 height={400}
@@ -369,7 +377,7 @@ export default function Home() {
         {/* Project 3 */}
         <div
           ref={project2Ref}
-          className="relative flex flex-col lg:flex-row items-center justify-center gap-[11.875rem]"
+          className="relative flex flex-row items-center justify-center gap-[11.875rem]"
         >
           {/* lines */}
           <motion.div
@@ -414,7 +422,7 @@ export default function Home() {
           >
             <div className="relative">
               <Image
-                src="/description2.png"
+                src="/details3.png"
                 alt="Project Details"
                 width={400}
                 height={400}
@@ -422,9 +430,8 @@ export default function Home() {
               />
               {/* Yellow overlay to cover the existing button */}
               <div className="absolute bottom-[12%] left-0 w-full flex justify-center">
-                <div className="absolute -bottom-5 left-2/4 -translate-x-1/2 w-2/4 h-[50px] bg-[#fef08a]" />
                 <Link
-                  href="/case-studies/cravings/"
+                  href="/case-studies/nds/"
                   className="relative border-2 border-black px-[0.375rem] py-[0.09375rem] font-neueMachinaBold text-[#323334] rounded-md hover:bg-black hover:text-[#fef08a] transition-colors bg-[#fef08a] transform rotate-2 text-sm sm:text-base"
                 >
                   VIEW PROJECT
@@ -432,6 +439,277 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Playground */}
+      <section className=" flex flex-col items-center bg-[#111111] pt-[6.875rem]  mt-[12.375rem]">
+        <div className="flex justify-center w-full">
+          <h1 className="text-[#FF6600] text-[2.5rem] font-black mb-[2.4375rem] ml-[5rem] font-neueMachina">
+            Playground
+          </h1>
+        </div>
+
+        {/* Film Strip Container */}
+        <div className="relative w-full">
+          {/* Top Film Strip */}
+          <div className="w-full h-[2rem]  flex items-center justify-between px-4 mb-2">
+            <span className="text-white text-xs">
+              1600 NEGATIVE REVERSAL A4
+            </span>
+            <div className="flex gap-8">
+              <span className="text-white text-xs">→ 1</span>
+              <span className="text-white text-xs">→ 2A</span>
+              <span className="text-white text-xs">→ 3A</span>
+            </div>
+            <span className="text-[#918D8D] text-xs">DUAL STND FILM</span>
+          </div>
+          <div className="w-full h-[2rem] flex items-center justify-start gap-6  mb-2">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className="w-[3.5625rem] h-[2rem] bg-[#918D8D]" />
+            ))}
+          </div>
+
+          {/* Images Container */}
+          <div className="relative overflow-hidden w-full">
+            <div className="flex animate-scroll">
+              {/* First set of images */}
+              <div className="flex gap-4 shrink-0">
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner1.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner2.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner3.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner4.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Duplicate set for seamless loop */}
+              <div className="flex gap-4 shrink-0 ml-4">
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner1.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner2.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner3.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner4.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-fullg gap-[110px] flex items-center justify-center px-4 mb-2">
+            <span className="text-white text-xs">GRADE BALANCED FILM 6710</span>
+            <span className="text-white text-xs">GRADE BALANCED FILM 6710</span>
+          </div>
+
+          <div className="w-full h-[2rem] flex items-center justify-start gap-6  mb-2">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className="w-[3.5625rem] h-[2rem] bg-[#918D8D]" />
+            ))}
+          </div>
+          <div className="w-full  flex items-center justify-center px-4 mb-2">
+            <div className="flex gap-8">
+              <span className="text-white text-xs">→ 4</span>
+              <span className="text-white text-xs">→ 4A</span>
+              <span className="text-white text-xs">→ 5A</span>
+            </div>
+          </div>
+        </div>
+        {/* Film Strip Container 2*/}
+        <div className="relative w-full mt-16">
+          {/* Top Film Strip */}
+          <div className="w-full h-[2rem]  flex items-center justify-between px-4 mb-2">
+            <span className="text-white text-xs">
+              1600 NEGATIVE REVERSAL A4
+            </span>
+            <div className="flex gap-8">
+              <span className="text-white text-xs">→ 1</span>
+              <span className="text-white text-xs">→ 2A</span>
+              <span className="text-white text-xs">→ 3A</span>
+            </div>
+            <span className="text-[#918D8D] text-xs">DUAL STND FILM</span>
+          </div>
+          <div className="w-full h-[2rem] flex items-center justify-start gap-6  mb-2">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className="w-[3.5625rem] h-[2rem] bg-[#918D8D]" />
+            ))}
+          </div>
+
+          {/* Images Container */}
+          <div className="relative overflow-hidden w-full">
+            <div className="flex animate-scrolltwo">
+              {/* First set of images */}
+              <div className="flex gap-4 shrink-0">
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner5.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner2.png"
+                    alt="Banner 6"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner3.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner4.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Duplicate set for seamless loop */}
+              <div className="flex gap-4 shrink-0 ml-4">
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner5.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner6.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner3.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
+                  <img
+                    src="/banner4.png"
+                    alt="Banner 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-fullg gap-[110px] flex items-center justify-center px-4 mb-2">
+            <span className="text-white text-xs">GRADE BALANCED FILM 6710</span>
+            <span className="text-white text-xs">GRADE BALANCED FILM 6710</span>
+          </div>
+
+          <div className="w-full h-[2rem] flex items-center justify-start gap-6  mb-2">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className="w-[3.5625rem] h-[2rem] bg-[#918D8D]" />
+            ))}
+          </div>
+          <div className="w-full  flex items-center justify-center px-4 mb-2">
+            <div className="flex gap-8">
+              <span className="text-white text-xs">→ 4</span>
+              <span className="text-white text-xs">→ 4A</span>
+              <span className="text-white text-xs">→ 5A</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* footer */}
+      <section
+        id="contact"
+        className="flex justify-between items-start bg-[#111111] py-[100px] pt-[6.875rem] px-[6.25rem] mt-[12.375rem] relative"
+      >
+        <div className="absolute top-[9.55rem] right-[26.4375rem] w-[36.938rem] z-10">
+          <img src="/line8.png" alt="" className="w-full" />
+        </div>
+        <div className="max-w-[37.875rem] flex flex-col items-start z-20">
+          <h1 className="text-[#FF6600] text-[4rem] font-normal mb-[2.4375rem] font-neueMachina">
+            Got a killer idea? Share it with me!
+          </h1>
+          <div className="flex gap-8 justify-center items-start ">
+            <img src="/hello.png" alt="Hello" className="w-[9.813rem] h-auto" />
+            <Link
+              href="https://medium.com/@isaacprince002"
+              target="_blank"
+              className="flex justify-center items-center"
+            >
+              <img src="/tm.png" alt="Twitter" className="w-auto h-auto" />
+            </Link>
+          </div>
+        </div>
+        <div>
+          <div
+            initial={{ opacity: 0, x: 50 }}
+            className="relative w-full lg:w-[23.0625rem] z-20"
+          >
+            <div className="relative">
+              <Image
+                src="/message.png"
+                alt="Project Details"
+                width={400}
+                height={400}
+                className="w-full h-auto"
+              />
+              <div className="absolute bottom-[12%] left-0 w-full flex justify-center">
+                <Link
+                  href="mailto:isaacprince002@gmail.com"
+                  target="_blank"
+                  className="border-2 border-black px-[0.375rem] py-[0.09375rem] font-neueMachinaBold text-[#323334] rounded-md hover:bg-black hover:text-[#fef08a] transition-colors bg-[#fef08a] transform rotate-2 text-sm sm:text-base"
+                >
+                  DROP A MESSAGE
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
