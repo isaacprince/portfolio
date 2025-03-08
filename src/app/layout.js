@@ -38,8 +38,9 @@ const chalkduster = localFont({
 });
 
 export const metadata = {
-  title: "Your Title",
-  description: "Your Description",
+  title: "Isaac Prince portfolio",
+  description:
+    "Prince operates at the intersection of two critical domains: the pursuit of enjoyment and the pragmatic resolution of business challenges through design. This approach enables Prince to deliver exceptional user experiences while effectively addressing the needs of the business.",
 };
 
 export default function RootLayout({ children }) {
