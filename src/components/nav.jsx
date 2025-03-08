@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export default function Nav() {
@@ -23,7 +24,7 @@ export default function Nav() {
     <nav className="pt-[1rem] w-full">
       <div className=" px-[12.25rem]">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-[0.375rem]">
+          <Link href="/" className="flex items-center gap-[0.375rem]">
             <div className="h-[2rem] w-[2rem]">
               <Image
                 src="/logo.png"
@@ -41,7 +42,7 @@ export default function Nav() {
                 ISAAC
               </span>
             </div>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-8">
             {["Projects", "About", "Contact"].map((item) => (

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Footer from "@/components/footer";
 import Nav from "@/components/nav";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import Image from "next/image";
@@ -56,7 +57,7 @@ export default function Home() {
 
             {/* Links Section */}
             <motion.div
-              className="relative  top-[43.625rem] left-[9.9375rem] z-20"
+              className="relative w-fit top-[43.625rem] left-[9.9375rem] z-20"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
@@ -144,7 +145,9 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
             >
-              <img src="/playground.png" alt="" className="w-full" />
+              <Link href="/playground">
+                <img src="/playground.png" alt="" className="w-full" />
+              </Link>
             </motion.div>
 
             {/* lines */}
@@ -441,277 +444,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Playground */}
-      <section className=" flex flex-col items-center bg-[#111111] pt-[6.875rem]  mt-[12.375rem]">
-        <div className="flex justify-center w-full">
-          <h1 className="text-[#FF6600] text-[2.5rem] font-black mb-[2.4375rem] ml-[5rem] font-neueMachina">
-            Playground
-          </h1>
-        </div>
-
-        {/* Film Strip Container */}
-        <div className="relative w-full">
-          {/* Top Film Strip */}
-          <div className="w-full h-[2rem]  flex items-center justify-between px-4 mb-2">
-            <span className="text-white text-xs">
-              1600 NEGATIVE REVERSAL A4
-            </span>
-            <div className="flex gap-8">
-              <span className="text-white text-xs">→ 1</span>
-              <span className="text-white text-xs">→ 2A</span>
-              <span className="text-white text-xs">→ 3A</span>
-            </div>
-            <span className="text-[#918D8D] text-xs">DUAL STND FILM</span>
-          </div>
-          <div className="w-full h-[2rem] flex items-center justify-start gap-6  mb-2">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="w-[3.5625rem] h-[2rem] bg-[#918D8D]" />
-            ))}
-          </div>
-
-          {/* Images Container */}
-          <div className="relative overflow-hidden w-full">
-            <div className="flex animate-scroll">
-              {/* First set of images */}
-              <div className="flex gap-4 shrink-0">
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner1.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner2.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner3.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner4.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Duplicate set for seamless loop */}
-              <div className="flex gap-4 shrink-0 ml-4">
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner1.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner2.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner3.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner4.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-fullg gap-[110px] flex items-center justify-center px-4 mb-2">
-            <span className="text-white text-xs">GRADE BALANCED FILM 6710</span>
-            <span className="text-white text-xs">GRADE BALANCED FILM 6710</span>
-          </div>
-
-          <div className="w-full h-[2rem] flex items-center justify-start gap-6  mb-2">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="w-[3.5625rem] h-[2rem] bg-[#918D8D]" />
-            ))}
-          </div>
-          <div className="w-full  flex items-center justify-center px-4 mb-2">
-            <div className="flex gap-8">
-              <span className="text-white text-xs">→ 4</span>
-              <span className="text-white text-xs">→ 4A</span>
-              <span className="text-white text-xs">→ 5A</span>
-            </div>
-          </div>
-        </div>
-        {/* Film Strip Container 2*/}
-        <div className="relative w-full mt-16">
-          {/* Top Film Strip */}
-          <div className="w-full h-[2rem]  flex items-center justify-between px-4 mb-2">
-            <span className="text-white text-xs">
-              1600 NEGATIVE REVERSAL A4
-            </span>
-            <div className="flex gap-8">
-              <span className="text-white text-xs">→ 1</span>
-              <span className="text-white text-xs">→ 2A</span>
-              <span className="text-white text-xs">→ 3A</span>
-            </div>
-            <span className="text-[#918D8D] text-xs">DUAL STND FILM</span>
-          </div>
-          <div className="w-full h-[2rem] flex items-center justify-start gap-6  mb-2">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="w-[3.5625rem] h-[2rem] bg-[#918D8D]" />
-            ))}
-          </div>
-
-          {/* Images Container */}
-          <div className="relative overflow-hidden w-full">
-            <div className="flex animate-scrolltwo">
-              {/* First set of images */}
-              <div className="flex gap-4 shrink-0">
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner5.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner2.png"
-                    alt="Banner 6"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner3.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner4.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Duplicate set for seamless loop */}
-              <div className="flex gap-4 shrink-0 ml-4">
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner5.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner6.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner3.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-[36.5rem] h-[26.25rem] relative p-4">
-                  <img
-                    src="/banner4.png"
-                    alt="Banner 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-fullg gap-[110px] flex items-center justify-center px-4 mb-2">
-            <span className="text-white text-xs">GRADE BALANCED FILM 6710</span>
-            <span className="text-white text-xs">GRADE BALANCED FILM 6710</span>
-          </div>
-
-          <div className="w-full h-[2rem] flex items-center justify-start gap-6  mb-2">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="w-[3.5625rem] h-[2rem] bg-[#918D8D]" />
-            ))}
-          </div>
-          <div className="w-full  flex items-center justify-center px-4 mb-2">
-            <div className="flex gap-8">
-              <span className="text-white text-xs">→ 4</span>
-              <span className="text-white text-xs">→ 4A</span>
-              <span className="text-white text-xs">→ 5A</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* footer */}
-      <section
-        id="contact"
-        className="flex justify-between items-start bg-[#111111] py-[100px] pt-[6.875rem] px-[6.25rem] mt-[12.375rem] relative"
-      >
-        <div className="absolute top-[9.55rem] right-[26.4375rem] w-[36.938rem] z-10">
-          <img src="/line8.png" alt="" className="w-full" />
-        </div>
-        <div className="max-w-[37.875rem] flex flex-col items-start z-20">
-          <h1 className="text-[#FF6600] text-[4rem] font-normal mb-[2.4375rem] font-neueMachina">
-            Got a killer idea? Share it with me!
-          </h1>
-          <div className="flex gap-8 justify-center items-start ">
-            <img src="/hello.png" alt="Hello" className="w-[9.813rem] h-auto" />
-            <Link
-              href="https://medium.com/@isaacprince002"
-              target="_blank"
-              className="flex justify-center items-center"
-            >
-              <img src="/tm.png" alt="Twitter" className="w-auto h-auto" />
-            </Link>
-          </div>
-        </div>
-        <div>
-          <div
-            initial={{ opacity: 0, x: 50 }}
-            className="relative w-full lg:w-[23.0625rem] z-20"
-          >
-            <div className="relative">
-              <Image
-                src="/message.png"
-                alt="Project Details"
-                width={400}
-                height={400}
-                className="w-full h-auto"
-              />
-              <div className="absolute bottom-[12%] left-0 w-full flex justify-center">
-                <Link
-                  href="mailto:isaacprince002@gmail.com"
-                  target="_blank"
-                  className="border-2 border-black px-[0.375rem] py-[0.09375rem] font-neueMachinaBold text-[#323334] rounded-md hover:bg-black hover:text-[#fef08a] transition-colors bg-[#fef08a] transform rotate-2 text-sm sm:text-base"
-                >
-                  DROP A MESSAGE
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Footer />
     </div>
   );
 }
