@@ -8,11 +8,14 @@ export default function Nav() {
 
   useEffect(() => {
     const updateTime = () => {
-      const now = new Date();
-      const hours = now.getHours() % 12 || 12;
-      const minutes = now.getMinutes().toString().padStart(2, "0");
-      const period = now.getHours() >= 12 ? "PM" : "AM";
-      setTime(`${hours}:${minutes} ${period}`);
+      const canadaTime = new Date().toLocaleTimeString("en-US", {
+        timeZone: "America/Toronto",
+        hour12: true,
+        hour: "numeric",
+        minute: "numeric",
+        // second: "numeric",
+      });
+      setTime(canadaTime);
     };
 
     updateTime();
