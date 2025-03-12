@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
@@ -8,22 +9,69 @@ export default function Footer() {
       id="contact"
       className="flex justify-between items-start bg-[#111111] py-[100px] pt-[6.875rem] px-[6.25rem] mt-[12.375rem] relative"
     >
-      <div className="absolute top-[9.55rem] right-[26.4375rem] w-[36.938rem] z-10">
+      <div className="absolute top-[9.55rem] right-[26.4375rem] w-[45.938rem] z-10">
         <img src="/line8.png" alt="" className="w-full" />
       </div>
-      <div className="max-w-[37.875rem] flex flex-col items-start z-20">
+      <div className="max-w-[37.875rem] flex flex-col gap-[4.313rem] items-start z-20">
         <h1 className="text-[#FF6600] text-[4rem] font-normal mb-[2.4375rem] font-neueMachina">
           Got a killer idea? Share it with me!
         </h1>
         <div className="flex gap-8 justify-center items-start ">
           <img src="/hello.png" alt="Hello" className="w-[9.813rem] h-auto" />
-          <Link
-            href="https://medium.com/@isaacprince002"
-            target="_blank"
-            className="flex justify-center items-center"
-          >
-            <img src="/tm.png" alt="Twitter" className="w-auto h-auto" />
-          </Link>
+          <div className="flex">
+            <motion.div
+              className="flex"
+              transition={{
+                duration: 0.8,
+                type: "spring",
+                stiffness: 300,
+                damping: 15,
+              }}
+              whileHover={{
+                scale: 1.1,
+                rotate: 5,
+                skew: -5,
+              }}
+            >
+              <Link
+                href="https://x.com/izikprinx"
+                target="_blank"
+                className="flex justify-center items-center  w-[7.25rem] h-[6.938rem]"
+              >
+                <img
+                  src="/twitter.png"
+                  alt="Twitter"
+                  className="w-auto h-auto"
+                />
+              </Link>
+            </motion.div>
+            <motion.div
+              className="flex"
+              transition={{
+                duration: 0.8,
+                type: "spring",
+                stiffness: 300,
+                damping: 15,
+              }}
+              whileHover={{
+                scale: 1.1,
+                rotate: 5,
+                skew: -5,
+              }}
+            >
+              <Link
+                href="https://medium.com/@isaacprince002"
+                target="_blank"
+                className="flex justify-center items-center  w-[7.25rem] h-[6.938rem]"
+              >
+                <img
+                  src="/medium.png"
+                  alt="Twitter"
+                  className="w-auto h-auto"
+                />
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </div>
       <div>

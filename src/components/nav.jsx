@@ -48,7 +48,7 @@ export default function Nav() {
             {["Projects", "About", "Contact"].map((item) => (
               <div key={item} className="relative group">
                 <a
-                  href={`#${item.toLowerCase()}`}
+                  href={`/#${item.toLowerCase()}`}
                   className="font-neueMachina text-[1rem] text-[#FF6600] hover:font-neueMachinaBold transition duration-300 z-10 relative"
                 >
                   {item}
