@@ -1,8 +1,8 @@
+"use client";
 import Footer from "@/components/footer";
 import Nav from "@/components/nav";
-import React from "react";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="bg-[#111111]">
       <Nav />
