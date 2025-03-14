@@ -22,327 +22,335 @@ export default function Home() {
   return (
     <div className="min-h-screen h-full bg-[#111111]">
       {/* hero */}
-      <main className="min-h-screen h-full bg-[#111111] relative">
+      <main className="min-h-fit lg:min-h-screen h-full bg-[#111111] relative">
         <Nav />
 
         <AnimatePresence mode="wait">
           <div className="relative pt-0 mt-10 bg-[#111111] h-full">
-            {/* About Section */}
-            <motion.div
-              className="absolute top-[13.1875rem] left-[12.3125rem] w-[18.5625rem] z-20"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <img src="/about.png" alt="" className="w-full" />
-              <p className="absolute w-[15.125rem] top-[3.75rem] left-[1.875rem] text-[#333435] font-neueMachinaBold font-[800] text-sm leading-[1rem]">
-                Prince operates at the intersection of two critical domains: the
-                pursuit of enjoyment and the pragmatic resolution of business
-                challenges through design.
-                <br /> This approach enables Prince to deliver exceptional user
-                experiences while effectively addressing the needs of the
-                business.
-              </p>
-            </motion.div>
+            <div className="relative w-full h-full pb-[4rem] md:pb-[6rem]">
+              {/* About Section */}
+              <motion.div
+                className="absolute top-[13.1875rem] left-[1rem] md:left-[12.3125rem] w-[18.5625rem] z-20"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <img src="/about.png" alt="" className="w-full" />
+                <p className="absolute w-[15.125rem] top-[3.75rem] left-[1.875rem] text-[#333435] font-neueMachinaBold font-[800] text-sm leading-[1rem]">
+                  Prince operates at the intersection of two critical domains: the
+                  pursuit of enjoyment and the pragmatic resolution of business
+                  challenges through design.
+                  <br /> This approach enables Prince to deliver exceptional user
+                  experiences while effectively addressing the needs of the
+                  business.
+                </p>
+              </motion.div>
 
-            {/* Center Profile */}
-            <motion.div
-              className="absolute top-0 left-1/2 -translate-x-1/2 z-20"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0 }}
-            >
-              <img src="/prince.png" alt="" className="w-[31rem] mx-auto" />
-            </motion.div>
+              {/* Center Profile */}
+              <motion.div
+                className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-full md:w-auto"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0 }}
+              >
+                <img 
+                  src="/prince.png" 
+                  alt="" 
+                  className="w-[20rem] md:w-[31rem] mx-auto" 
+                />
+              </motion.div>
 
-            {/* Links Section */}
-            <motion.div
-              className="relative w-fit top-[43.625rem] left-[9.9375rem] z-20"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-            >
-              <div className="absolute top-8 left-0 flex">
-                {/* LinkedIn */}
-                <motion.div
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    skew: -5,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 15,
-                  }}
-                  className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
-                >
-                  <Link
-                    target="_blank"
-                    href="https://www.linkedin.com/in/prince-isaac/"
-                    className="block w-full h-full"
+              {/* Links Section - Adjust top position for tablet */}
+              <motion.div
+                className="absolute top-[35rem] md:top-[43.625rem] left-[1rem] md:left-[9.9375rem] z-20 w-full md:w-fit"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
+                <div className="absolute top-8 left-0 flex">
+                  {/* LinkedIn */}
+                  <motion.div
+                    whileHover={{
+                      scale: 1.1,
+                      rotate: 5,
+                      skew: -5,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 15,
+                    }}
+                    className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
                   >
-                    <img
-                      src="/linkedin.png"
-                      alt="LinkedIn"
-                      className="w-full h-full"
-                    />
-                  </Link>
+                    <Link
+                      target="_blank"
+                      href="https://www.linkedin.com/in/prince-isaac/"
+                      className="block w-full h-full"
+                    >
+                      <img
+                        src="/linkedin.png"
+                        alt="LinkedIn"
+                        className="w-full h-full"
+                      />
+                    </Link>
+                  </motion.div>
+
+                  {/* Dribbble */}
+                  <motion.div
+                    whileHover={{
+                      scale: 1.1,
+                      rotate: 5,
+                      skew: -5,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 15,
+                    }}
+                    className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
+                  >
+                    <Link
+                      target="_blank"
+                      href="https://dribbble.com/princeisaac"
+                      className="block w-full h-full"
+                    >
+                      <img
+                        src="/dribble.png"
+                        alt="Dribble"
+                        className="w-full h-full"
+                      />
+                    </Link>
+                  </motion.div>
+
+                  {/* Behance */}
+                  <motion.div
+                    whileHover={{
+                      scale: 1.1,
+                      rotate: 5,
+                      skew: -5,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 15,
+                    }}
+                    className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
+                  >
+                    <Link
+                      target="_blank"
+                      href="https://www.behance.net/princeisaac"
+                      className="block w-full h-full"
+                    >
+                      <img
+                        src="/behance.png"
+                        alt="Behance"
+                        className="w-full h-full"
+                      />
+                    </Link>
+                  </motion.div>
+
+                  {/* GitHub */}
+                  <motion.div
+                    whileHover={{
+                      scale: 1.1,
+                      rotate: 5,
+                      skew: -5,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 15,
+                    }}
+                    className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
+                  >
+                    <Link
+                      target="_blank"
+                      href="https://github.com/isaacprince"
+                      className="block w-full h-full"
+                    >
+                      <img
+                        src="/github.png"
+                        alt="GitHub"
+                        className="w-full h-full"
+                      />
+                    </Link>
+                  </motion.div>
+
+                  {/* Email */}
+                  <motion.div
+                    whileHover={{
+                      scale: 1.1,
+                      rotate: 5,
+                      skew: -5,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 15,
+                    }}
+                    className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
+                  >
+                    <Link
+                      href="mailto:isaacprince002@gmail.com"
+                      target="_blank"
+                      className="block w-full h-full"
+                    >
+                      <img
+                        src="/email.png"
+                        alt="Email"
+                        className="w-full h-full"
+                      />
+                    </Link>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              {/* Right Side Notes - Each with absolute positioning */}
+              {/* CV Note */}
+              <motion.div
+                className="absolute top-[11.375rem] right-[1rem] md:right-[15.375rem] w-[8.708rem] z-20"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.8,
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 15,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  skew: -5,
+                }}
+              >
+                <Link
+                  href="https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/edit?tab=t.0"
+                  target="_blank"
+                >
+                  <img src="/cv.png" alt="" className="w-full h-[9.72875rem]" />
+                </Link>
+              </motion.div>
+
+              {/* Likes Note */}
+              <motion.div
+                className="absolute top-[25.0625rem] right-[14.0625rem] w-[9.0625rem] z-20"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                <img src="/likes.png" alt="" className="w-full" />
+              </motion.div>
+
+              {/* Selected Work Note */}
+              <motion.div
+                className="absolute top-[38.6875rem] cursor-pointer right-[9.875rem] w-[10.9375rem] z-20"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.8,
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 15,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  skew: -5,
+                }}
+              >
+                <Link href="#projects">
+                  <img src="/work.png" alt="" className="w-full" />
+                </Link>
+              </motion.div>
+
+              {/* Playground Note */}
+              <motion.div
+                className="absolute top-[42.9375rem] cursor-pointer right-[24.75rem] w-[10.9375rem] z-20"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.8,
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 15,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  skew: -5,
+                }}
+              >
+                <Link href="/playground">
+                  <img src="/playground.png" alt="" className="w-full" />
+                </Link>
+              </motion.div>
+
+              {/* lines */}
+              <div className="hidden md:block">
+                <motion.div
+                  className="absolute top-[14.875rem] left-[24.0625rem] w-[53.4375rem] z-10"
+                  initial={{ opacity: 0, scaleX: 0 }}
+                  animate={{ opacity: 1, scaleX: 1 }}
+                  transition={{ duration: 1, delay: 1.1 }}
+                >
+                  <img src="/line1.png" alt="" className="w-full" />
                 </motion.div>
-
-                {/* Dribbble */}
                 <motion.div
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    skew: -5,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 15,
-                  }}
-                  className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
+                  className="absolute top-[14.375rem] left-[20.9375rem] w-[57.3125rem] z-10"
+                  initial={{ opacity: 0, scaleX: 0 }}
+                  animate={{ opacity: 1, scaleX: 1 }}
+                  transition={{ duration: 1, delay: 1.2 }}
                 >
-                  <Link
-                    target="_blank"
-                    href="https://dribbble.com/princeisaac"
-                    className="block w-full h-full"
-                  >
-                    <img
-                      src="/dribble.png"
-                      alt="Dribble"
-                      className="w-full h-full"
-                    />
-                  </Link>
+                  <img src="/line2.png" alt="" className="w-full" />
                 </motion.div>
-
-                {/* Behance */}
                 <motion.div
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    skew: -5,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 15,
-                  }}
-                  className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
+                  className="absolute top-[14.625rem] right-[18.875rem] h-[17.1875rem] z-10"
+                  initial={{ opacity: 0, scaleY: 0 }}
+                  animate={{ opacity: 1, scaleY: 1 }}
+                  transition={{ duration: 1, delay: 1.3 }}
                 >
-                  <Link
-                    target="_blank"
-                    href="https://www.behance.net/princeisaac"
-                    className="block w-full h-full"
-                  >
-                    <img
-                      src="/behance.png"
-                      alt="Behance"
-                      className="w-full h-full"
-                    />
-                  </Link>
+                  <img src="/line3.png" alt="" className="h-full" />
                 </motion.div>
-
-                {/* GitHub */}
                 <motion.div
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    skew: -5,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 15,
-                  }}
-                  className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
+                  className="absolute top-[27.75rem] right-[17.5625rem] h-[15.1875rem] z-10"
+                  initial={{ opacity: 0, scaleY: 0 }}
+                  animate={{ opacity: 1, scaleY: 1 }}
+                  transition={{ duration: 1, delay: 1.4 }}
                 >
-                  <Link
-                    target="_blank"
-                    href="https://github.com/isaacprince"
-                    className="block w-full h-full"
-                  >
-                    <img
-                      src="/github.png"
-                      alt="GitHub"
-                      className="w-full h-full"
-                    />
-                  </Link>
+                  <img src="/line4.png" alt="" className="h-full" />
                 </motion.div>
-
-                {/* Email */}
                 <motion.div
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    skew: -5,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 15,
-                  }}
-                  className="text-white w-[7.25rem] h-[6.938rem] ml-[-1.25rem]"
+                  className="absolute top-[39.125rem] right-[17rem] w-[15.1875rem] z-10"
+                  initial={{ opacity: 0, scaleX: 0 }}
+                  animate={{ opacity: 1, scaleX: 1 }}
+                  transition={{ duration: 1, delay: 1.5 }}
                 >
-                  <Link
-                    href="mailto:isaacprince002@gmail.com"
-                    target="_blank"
-                    className="block w-full h-full"
-                  >
-                    <img
-                      src="/email.png"
-                      alt="Email"
-                      className="w-full h-full"
-                    />
-                  </Link>
+                  <img src="/line5.png" alt="" className="w-full" />
                 </motion.div>
               </div>
-            </motion.div>
 
-            {/* Right Side Notes - Each with absolute positioning */}
-            {/* CV Note */}
-            <motion.div
-              className="absolute top-[11.375rem] right-[15.375rem] w-[8.708rem] z-20"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.8,
-                type: "spring",
-                stiffness: 300,
-                damping: 15,
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 5,
-                skew: -5,
-              }}
-            >
-              <Link
-                href="https://docs.google.com/document/d/1V71I5XEU6sNjQYbbp_OR01lRsljHkSKBH_HKVLuB3Gk/edit?tab=t.0"
-                target="_blank"
+              {/* scroll down - adjust position for tablet */}
+              <motion.div
+                className="absolute top-[42rem] md:top-[50rem] left-1/2 w-[3.1875rem] -translate-x-1/2 z-20"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 1.7,
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "reverse",
+                }}
               >
-                <img src="/cv.png" alt="" className="w-full h-[9.72875rem]" />
-              </Link>
-            </motion.div>
-
-            {/* Likes Note */}
-            <motion.div
-              className="absolute top-[25.0625rem] right-[14.0625rem] w-[9.0625rem] z-20"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              <img src="/likes.png" alt="" className="w-full" />
-            </motion.div>
-
-            {/* Selected Work Note */}
-            <motion.div
-              className="absolute top-[38.6875rem] cursor-pointer right-[9.875rem] w-[10.9375rem] z-20"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.8,
-                type: "spring",
-                stiffness: 300,
-                damping: 15,
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 5,
-                skew: -5,
-              }}
-            >
-              <Link href="#projects">
-                <img src="/work.png" alt="" className="w-full" />
-              </Link>
-            </motion.div>
-
-            {/* Playground Note */}
-            <motion.div
-              className="absolute top-[42.9375rem] cursor-pointer right-[24.75rem] w-[10.9375rem] z-20"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.8,
-                type: "spring",
-                stiffness: 300,
-                damping: 15,
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 5,
-                skew: -5,
-              }}
-            >
-              <Link href="/playground">
-                <img src="/playground.png" alt="" className="w-full" />
-              </Link>
-            </motion.div>
-
-            {/* lines */}
-            <motion.div
-              className="absolute top-[14.875rem] left-[24.0625rem] w-[53.4375rem] z-10"
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 1, delay: 1.1 }}
-            >
-              <img src="/line1.png" alt="" className="w-full" />
-            </motion.div>
-            <motion.div
-              className="absolute top-[14.375rem] left-[20.9375rem] w-[57.3125rem] z-10"
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-            >
-              <img src="/line2.png" alt="" className="w-full" />
-            </motion.div>
-            <motion.div
-              className="absolute top-[14.625rem] right-[18.875rem] h-[17.1875rem] z-10"
-              initial={{ opacity: 0, scaleY: 0 }}
-              animate={{ opacity: 1, scaleY: 1 }}
-              transition={{ duration: 1, delay: 1.3 }}
-            >
-              <img src="/line3.png" alt="" className="h-full" />
-            </motion.div>
-            <motion.div
-              className="absolute top-[27.75rem] right-[17.5625rem] h-[15.1875rem] z-10"
-              initial={{ opacity: 0, scaleY: 0 }}
-              animate={{ opacity: 1, scaleY: 1 }}
-              transition={{ duration: 1, delay: 1.4 }}
-            >
-              <img src="/line4.png" alt="" className="h-full" />
-            </motion.div>
-            <motion.div
-              className="absolute top-[39.125rem] right-[17rem] w-[15.1875rem] z-10"
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 1, delay: 1.5 }}
-            >
-              <img src="/line5.png" alt="" className="w-full" />
-            </motion.div>
-
-            {/* scroll down */}
-            <motion.div
-              className="absolute top-[50rem] left-1/2 w-[3.1875rem] -translate-x-1/2 z-20"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 1.7,
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "reverse",
-              }}
-            >
-              <img src="/scroll.png" alt="" className="w-full" />
-            </motion.div>
+                <img src="/scroll.png" alt="" className="w-full" />
+              </motion.div>
+            </div>
           </div>
         </AnimatePresence>
       </main>
       {/* selected projects */}
       <section
         id="projects"
-        className="min-h-screen flex flex-col items-center bg-[#111111] pt-[6.875rem] px-[6.25rem] mt-[12.375rem]"
+        className="min-h-screen flex flex-col items-center bg-[#111111] pt-[6.875rem] px-[6.25rem] mt-[12.375rem] md:mt-[58.375rem] lg:mt-[12.375rem]"
       >
         <div className="flex justify-start w-full">
           <h1 className="text-[#FF6600] text-[2.5rem] font-normal mb-[2.4375rem] ml-[5rem] font-neueMachina">
